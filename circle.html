@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 未   渐变 */
+        body {
+            position: relative;
+        }
+        .content {
+            /* 居中 */
+            position: absolute;
+            top: 200px;
+            left: 600px;
+
+            width: 200px;
+            height: 200px;
+            /* background-color: blue; */
+        }
+        .content .box1 {
+            /* 为了让两个圆环的盒子在一行 */
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            /* background-color: black; */
+            /* 旋转式溢出隐藏 */
+            overflow: hidden;
+        }
+        .content .box1 .left {
+            height: 160px;
+            width: 160px;
+            border:15px solid transparent;
+            border-radius: 50%;
+            border-bottom: 15px solid red;
+            border-left: 15px solid red; 
+            transform: rotate(-135deg);
+            /* 把隐藏部分先显示 */
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            
+            animation: left_circle  8s linear infinite;
+        }
+       
+        @keyframes left_circle {
+            0%,50% {
+                /* 让其隐藏起来 ,0-50% */ 
+                transform: rotate(-135deg);
+            }
+            100% {
+                /* 从隐藏部分赚回来 */
+                transform: rotate(45deg);
+            }
+        }
+        .content .box2 {
+            /* 为了让两个圆环的盒子在一行 */
+            position: absolute;
+            left: 100px;
+            width: 100px;
+            height: 200px;
+            /* background-color: pink; */
+            /* 旋转式溢出隐藏 */
+            overflow: hidden;
+        }
+
+        .content .box2 .right {
+            height: 160px;
+            width: 160px;
+            border:15px solid transparent;
+            border-radius: 50%;
+            border-top: 15px solid red;
+            border-right: 15px solid red; 
+            transform: rotate(-135deg);
+            /* 把隐藏部分先显示 */
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            
+            animation: rifht_circle 8s linear infinite;
+        }
+        @keyframes rifht_circle {
+            0% {
+                /* 让其隐藏起来 */
+                transform: rotate(-135deg);
+            }
+            50%,100% {
+                /* 从隐藏部分赚回来 */
+                transform: rotate(45deg);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 借鉴思路： 两个半圆环 -->
+    <div class="content">
+        <!-- 里面放两个盒子，盒子里面放圆环 -->
+        <div class="box1">
+            <!-- 放左边的半圆 -->
+            <div class="left"></div>
+        </div>
+        <div class="box2">
+            <!-- 放右边的半圆 -->
+            <div class="right"></div>
+        </div>
+    </div>
+</body>
+</html>

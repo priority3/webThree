@@ -1,0 +1,275 @@
+/* 移动端下让head中的内容不显示 */
+.box .head .libox,.search,.right{
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.w {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    background-color: black;
+    height: 70px;
+}
+/* 修饰移动端下的hexo图 */
+.box .head .content .hexo {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+}
+/* 菜单按钮 */
+.header .mpic {
+    font-family: 'icomoon';
+    font-size: 35px;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    color: #8B8F92;
+}
+
+
+
+/* 菜单css */
+.menu {
+    position: absolute;
+    /* 测试 */
+    left: -500px;
+    width: 65%;
+    height: 713px;
+    background-color: #171F26;
+    z-index: 2; 
+}
+.menu .li1 {
+    margin-top: 10px;
+}
+.menu ul a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    font-size: 14px;
+    line-height: 1;
+    white-space: nowrap;
+    /* 隐藏文本溢出部分 */
+    overflow: hidden;
+    /* 溢出部分用省略号代替 */
+    text-overflow: ellipsis;
+}
+
+.menu .footer {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    color: #fff;
+    font-size: 17px;
+    width: 99%;
+    height: 40px;
+    text-indent: 1.6em;
+    line-height: 40px;
+    border: 1px solid transparent;
+    border-top: 1px solid #444444;
+}
+
+.menu .dele {
+    position: absolute;
+    right: -52px;
+    top: 0;
+    /* 旋转 */
+    transform: rotateY(40deg);
+    display: block;
+    font-family: 'icomoon';
+    color: #4D4D4D;
+    font-size: 25px;
+    width: 60px;
+    height: 50px;
+    background-color: black;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+/* mobile下的内容css */
+.banner .nav h2{
+    /* font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif; */
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1;
+    /* float: left; */
+    margin: 30px 0 0 0;
+
+}
+
+.banner .nav .sec {
+    margin: 40px 0 0 0;
+}
+
+.banner .nav .sec input {
+    width: 100%;
+    height: 35px;
+    text-indent: 0.8em;
+    border: 1px solid #e3e3e3;
+}
+.banner .nav .sec span {
+    float: right;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #999999;
+}
+
+/* banner 下的con */
+.banner .con {
+    margin: 0 auto;
+    margin-top: 70px;
+    
+    /* margin-left: 20px; */
+}
+.banner ul {
+    overflow: hidden;
+}
+
+.banner .con li {
+    list-style: none;
+    float: left;
+    width: 46%;
+    height: 330px;
+    padding-right: 4%;
+    margin-bottom: 10px;
+}
+
+.banner .con li img {
+    width: 100%;
+    height: 65%;
+}
+
+.banner a{
+    text-decoration: none;
+}
+
+.banner li a{
+    /* position: relative; */
+    font-size: 13px;
+    margin: 15px 8px 0px 0;
+    color: #9999B3;
+} 
+.banner li a:hover {
+    color: #0E83CD ;
+}
+
+.banner li a:nth-of-type(1){
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    font-weight: 400;
+    color:#0E83CD ;
+}
+
+.banner li h2 {
+    font-size: 21px;
+    font-weight: 400;
+    color:#0E83CD ;
+}
+
+.banner li p {
+    font-size: 15px;
+    margin:0 0 10px 0;
+}
+
+/* 遮层 */
+.banner li .mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.5); 
+}
+.banner li a:hover .mask {
+    display: block;
+}
+
+
+
+/* 眼睛缩放 */
+.banner li .mask::before {
+    position: absolute;
+    left:-8px;
+    top:-10px;
+    width: 100%;
+    height: 100%;
+    font-size: 300px;
+    color: #ffffff;
+    font-family: 'icomoon';
+    content: '';
+    transition: all 0.2s;
+}
+
+.banner li .mask:hover::before{
+    transform: scale(0.15);
+}
+
+
+/* 内容底部 */
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+.footer .content{
+    position: relative;
+    height: 100%;
+    background-color:black;
+}
+
+
+.footer .content .line{
+    display: inline-block;
+}
+
+.footer .lec {
+    font-size: 15px;
+    position: absolute;
+    top:30px;
+    color: #A2A5A8;
+    
+}
+.footer .lec a {
+    text-decoration: none;
+    color: #A2A5A8;
+    font-weight: 600;
+}
+
+
+.footer .pic {
+    
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+
+/* 点击菜单栏时的遮盖的盒子 */
+.blackmask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 713px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+
+}
+
