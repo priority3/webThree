@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* pc下让移动端的header不显示 */
+.box .header {
+    display: 'none';
+}
+.w {
+    width: 1200px;
+    margin: 0 auto;
+    /* background-color: pink; */
+}
+.menu, .header {
+    display: none;
+}
+
+.head {
+    width: 100%;
+    height: 70px;
+    background-color: black;
+}
+.content {
+    position: relative;
+}
+/* hexo 图 */
+.head .hexo {
+    /* 头部的hexo图 */
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+/* 所有小li去除点 */
+li {
+    list-style: none;
+}
+ul {
+    padding: 0;
+}
+.head .libox {
+    position: absolute;
+    top:25px;
+    left:90px;
+
+}
+.head .content ul li {
+    float: left;
+    margin-right: 30px;
+    font-size: 15px;
+}
+.head ul li a {
+    color: #B9BBBD;
+    text-decoration: none;
+}
+.head ul li a:hover {
+    color: #1094E8;
+}
+
+/* 搜索栏 */
+.head .search{
+    position: absolute;
+    top: 25px;
+    left: 530px;
+    font-family: 'icomoon';
+    height: 30px;
+    width: 230px;
+    border: 0;
+    border-bottom: 1px solid #999999;
+    color: #757575;
+}
+.head .search input {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    height: 100%;
+    width: 92%;
+    font-size: 15px;
+    outline: none;
+    color: #757575;
+    background-color: black;
+    text-indent: 0.6em;
+}
+.head .search i {
+    font-family: 'icomoon';
+    font-style: normal;
+    position: absolute;
+    top:3px ;
+    font-size: 15px;
+    font-weight: 800;
+    color: #B9BBBD;
+}
+/* english */
+.head .right {
+    position: absolute;
+    right: 40px;
+    margin-top: 27px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #B9BBAB;
+}
+
+.head .right:hover {
+    cursor: default;
+}
+
+
+
+/* nav 设计 */
+.nav {
+    position: relative;
+    background-color: #ffffff;
+    height: 180px;
+}
+
+.nav h2 {
+    margin: 40px 0 0 0;
+    position: absolute;
+    left: 0px;
+    font-size: 37px;
+    font-weight: 300;
+}
+.nav span{
+    /* font-style: normal; */
+    position: absolute;
+    left: 0;
+    top: 11px;
+    
+}
+.nav .sec {
+    width: 57%;
+    color:#9CA9B3;
+    margin: 50px 0 0 0;
+    font-size: 14px;
+    position: absolute;
+    right: 40px;
+}
+.nav input {
+    float: right;
+    font-size: 13px;
+    height: 40px;
+    width: 600px;
+    color: #757575;
+    text-indent: 0.8em;
+    border: 1px solid #E3E3E3;
+}
+
+
+/* con 内容展示 */
+
+.banner ul {
+    overflow: hidden;
+}
+.banner li{
+    padding-right: 40px;
+    padding-bottom: 10px;
+    float: left;
+    /* background-color: pink; */
+    background-color: #ffffff;
+    width: 30%;
+    height: 400px;
+}
+.banner li img {
+    width: 100%;
+    height: 70%;
+}
+
+/* con li 中的文字 */
+.banner a{
+    text-decoration: none;
+}
+
+.banner li a{
+    /* position: relative; */
+    font-size: 13px;
+    margin: 15px 8px 10px 0;
+    color: #9999B3;
+} 
+.banner li a:hover {
+    color: #0E83CD ;
+}
+
+.banner li a:nth-of-type(1){
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    font-weight: 400;
+    color:#0E83CD ;
+}
+
+.banner li h2 {
+    font-size: 21px;
+    font-weight: 400;
+    color:#0E83CD ;
+}
+
+.banner li p {
+    font-size: 15px;
+    margin:0 0 20px 0;
+}
+
+/* 遮层 */
+.banner li .mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.5); 
+}
+.banner li a:hover .mask {
+    display: block;
+}
+
+
+
+/* 眼睛缩放 */
+.banner li .mask::before {
+    position: absolute;
+    left:0px;
+    top:0px;
+    width: 100%;
+    height: 100%;
+    font-size: 300px;
+    color: #ffffff;
+    font-family: 'icomoon';
+    content: '';
+    transition: all 0.3s;
+}
+
+.banner li .mask:hover::before{
+    transform: scale(0.15);
+}
+
+/* 底部 */
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+.footer .content{
+    position: relative;
+    height: 100%;
+    background-color:black;
+}
+
+
+.footer .content .line{
+    display: inline-block;
+}
+
+.footer .lec {
+    font-size: 15px;
+    position: absolute;
+    top:30px;
+    color: #A2A5A8;
+    
+}
+.footer .lec a {
+    text-decoration: none;
+    color: #A2A5A8;
+    font-weight: 600;
+}
+
+
+.footer .pic {
+    
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
